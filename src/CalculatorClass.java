@@ -11,6 +11,7 @@ public class CalculatorClass {
 			int num1;
 			int num2;
 			nextOp=0;
+			Operation=0;
 			System.out.println("Please insert your first number");
 			num1= scan.nextInt();
 			System.out.println("Insert your second number");
@@ -37,11 +38,11 @@ public class CalculatorClass {
 				System.out.println(Divide(num1,num2));
 				break;
 			}
-			while (nextOp!=1 || nextOp != 2)
+			while (nextOp>2 || nextOp < 1) {
 			System.out.println("Would you like to do another operation?\n"
 					+"1.Yes\n"
 					+"2.No");
-			nextOp=scan.nextInt();
+			nextOp=scan.nextInt();}
 		}
 		System.out.println("Thanks for calculating stuff");
 
